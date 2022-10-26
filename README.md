@@ -7,13 +7,13 @@ The Fido.ps1 functions are built into Rufus and can be used directly from the ap
 
 For this reason, I wrote a small PowerShell script that adds the GUI to Fido.ps1, allowing you to interact with a series of windows (a wizard) that will allow you to choose the version of Windows to download, the language, and the architecture.
 
-![FidoGUI: Select OS version](https://raw.githubusercontent.com/gioxx/fidogui/master/assets/0_fidogui_osversion.png) ![FidoGUI: Select OS release](https://raw.githubusercontent.com/gioxx/fidogui/master/assets/1_fidogui_osrelease.png)  
+![FidoGUI: Select OS version](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/0_fidogui_osversion.png) ![FidoGUI: Select OS release](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/1_fidogui_osrelease.png)  
 
-![FidoGUI: Select OS language](https://raw.githubusercontent.com/gioxx/fidogui/master/assets/2_fidogui_oslang.png) ![FidoGUI: Select OS architecture](https://raw.githubusercontent.com/gioxx/fidogui/master/assets/3_fidogui_osarch.png)   
+![FidoGUI: Select OS language](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/2_fidogui_oslang.png) ![FidoGUI: Select OS architecture](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/3_fidogui_osarch.png)   
 
-![FidoGUI: Select folder where download ISO file](https://raw.githubusercontent.com/gioxx/fidogui/master/assets/4_fidogui_folder.png)   
+![FidoGUI: Select folder where download ISO file](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/4_fidogui_folder.png)   
 
-![FidoGUI: PowerShell can now download the ISO file from Microsoft](https://raw.githubusercontent.com/gioxx/fidogui/master/assets/5_fidogui_pshelldownload.png)  
+![FidoGUI: PowerShell can now download the ISO file from Microsoft](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/5_fidogui_pshelldownload.png)  
 
 **FidoGUI.ps1** needs PowerShell version 5 or superior.  
 FidoGUI.ps1 searches for the Fido.ps1 script at startup (in the same working directory of FidoGUI.ps1), downloading it directly from the GitHub repository in case it cannot find it.
