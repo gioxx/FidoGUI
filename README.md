@@ -8,7 +8,6 @@ The Fido.ps1 functions are built into Rufus and can be used directly from the ap
 For this reason, I wrote a small PowerShell script that adds the GUI to Fido.ps1, allowing you to interact with a series of windows (a wizard) that will allow you to choose the version of Windows to download, the language, and the architecture.
 
 ![FidoGUI: Select OS version](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/0_fidogui_osversion.png) ![FidoGUI: Select OS release](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/1_fidogui_osrelease.png)  
-
 ![FidoGUI: Select OS language](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/2_fidogui_oslang.png) ![FidoGUI: Select OS architecture](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/3_fidogui_osarch.png)   
 
 ![FidoGUI: Select folder where download ISO file](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/4_fidogui_folder.png)   
