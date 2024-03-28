@@ -9,11 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: 'Auto-assign issue'
-<<<<<<< Updated upstream
-              uses: pozil/auto-assign-issue@v1.12.0
-=======
               uses: pozil/auto-assign-issue@v1.13.0
->>>>>>> Stashed changes
               with:
                   assignees: gioxx
                   numOfAssignee: 1
