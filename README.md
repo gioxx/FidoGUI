@@ -1,23 +1,104 @@
 # FidoGUI 🐶
-"*A graphical user interface for Fido.ps1*"
+*A graphical user interface for Fido.ps1*
 
-**Fido.ps1** is a PowerShell script made by [Pete Batard](https://github.com/pbatard), father of the fantastic utility [Rufus](https://github.com/pbatard/rufus). It allows you to easily download Microsoft Windows ISO files directly from Microsoft's servers.
+## 📌 What is this?
 
-The Fido.ps1 functions are built into Rufus and can be used directly from the application's GUI, but if you want to use only the PowerShell script, you need to know parameters, syntax, and other details of PowerShell (and of the Fido.ps1 script) that you maybe don't care about.
+**Fido.ps1** is a PowerShell script created by [Pete Batard](https://github.com/pbatard), the author of the brilliant [Rufus](https://github.com/pbatard/rufus) utility. It enables direct downloads of official Microsoft Windows ISO images from Microsoft’s servers.
 
-For this reason, I wrote a small PowerShell script that adds the GUI to Fido.ps1, allowing you to interact with a series of windows (a wizard) that will allow you to choose the version of Windows to download, the language, and the architecture.
+While **Fido.ps1** is integrated into Rufus and can be accessed via its GUI, using the script independently requires knowledge of PowerShell parameters, syntax, and switches — which you might not care to learn.
 
-![FidoGUI: Select OS version](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/0_fidogui_osversion.png) ![FidoGUI: Select OS release](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/1_fidogui_osrelease.png)  
-![FidoGUI: Select OS language](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/2_fidogui_oslang.png) ![FidoGUI: Select OS architecture](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/3_fidogui_osarch.png)   
+That’s where **FidoGUI.ps1** comes in.
 
-![FidoGUI: Select folder where download ISO file](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/4_fidogui_folder.png)   
+## 🎯 What does FidoGUI do?
 
-![FidoGUI: PowerShell can now download the ISO file from Microsoft](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/5_fidogui_pshelldownload.png)  
+**FidoGUI.ps1** is a wrapper that gives **Fido.ps1** a simple graphical interface, acting as a wizard that guides you through:
 
-**FidoGUI.ps1** needs PowerShell version 5 or superior.  
-FidoGUI.ps1 searches for the Fido.ps1 script at startup (in the same working directory of FidoGUI.ps1), downloading it directly from the GitHub repository in case it cannot find it.
+1. Selecting the Windows version  
+2. Choosing a specific release  
+3. Picking your preferred language  
+4. Defining the system architecture  
+5. Selecting the destination folder for your ISO  
+6. Automatically downloading the ISO file from Microsoft’s servers
 
-## Next step:
+> All of this — without typing a single line of PowerShell.
 
-- Search for updates of Fido.ps1 in opening FidoGUI.ps1 script (actually you can use `.\FidoGUI.ps1 -Update`).
-- Integration of an automatic update search and installation function for FidoGUI.ps1 at startup.
+---
+
+## 🖼️ Screenshots
+
+| Step-by-step GUI | Description |
+|------------------|-------------|
+| ![Select OS version](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/0_fidogui_osversion.png) ![Select OS release](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/1_fidogui_osrelease.png) | Choose version & release |
+| ![Select OS language](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/2_fidogui_oslang.png) ![Select OS architecture](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/3_fidogui_osarch.png) | Choose language & architecture |
+| ![Select download folder](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/4_fidogui_folder.png) | Select where to save the ISO |
+| ![Downloading ISO](https://raw.githubusercontent.com/gioxx/FidoGUI/master/assets/5_fidogui_pshelldownload.png) | PowerShell begins download |
+
+---
+
+## ⚙️ Requirements
+
+- Windows with **PowerShell 5.1** or later  
+- Internet connection  
+- No administrative privileges required  
+
+> `FidoGUI.ps1` checks for the presence of `Fido.ps1` in its working directory at launch.  
+> If missing, it automatically downloads the latest version from [GitHub](https://github.com/pbatard/Fido).
+
+---
+
+## 🚀 Usage
+
+Launch FidoGUI from PowerShell:
+
+```powershell
+.\FidoGUI.ps1
+```
+
+Optionally, check for updates to **Fido.ps1** before launching:
+
+```powershell
+.\FidoGUI.ps1 -Update
+```
+
+---
+
+## 🧪 Run directly from GitHub (no download required)
+
+If you just want to run **FidoGUI.ps1** without cloning the repository, you can do so directly via PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/gioxx/FidoGUI/master/FidoGUI.ps1 | iex
+```
+
+Or, using the long form for clarity:
+
+```powershell
+Invoke-Expression (Invoke-WebRequest -UseBasicParsing https://raw.githubusercontent.com/gioxx/FidoGUI/master/FidoGUI.ps1).Content
+```
+
+> ⚠️ Make sure your execution policy allows this, or run from an **elevated prompt**:
+> ```powershell
+> Set-ExecutionPolicy RemoteSigned -Scope Process
+> ```
+
+This will:
+
+- Download the latest version of `FidoGUI.ps1` into memory
+- Run it immediately
+- Download `Fido.ps1` automatically if missing
+
+---
+
+## 🔮 Roadmap
+
+- [ ] Run update check for `Fido.ps1` automatically at startup  
+- [ ] Add self-update feature for `FidoGUI.ps1`  
+- [ ] Improve error handling and fallback messages for API blocks
+
+---
+
+## 🤝 Credits
+
+- [Pete Batard](https://github.com/pbatard) for the original `Fido.ps1` script  
+- Inspiration from Rufus, Microsoft Docs, and community examples  
+- Various [Stack Overflow](https://stackoverflow.com/) contributors for GUI patterns and PowerShell tips  
