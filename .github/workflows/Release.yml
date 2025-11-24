@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5.0.0
+      - uses: actions/checkout@v6.0.0
 
       - name: Generate release tag 🏷️
         uses: amitsingh-007/next-release-tag@v6.3.0
