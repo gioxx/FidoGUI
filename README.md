@@ -1,6 +1,17 @@
 # FidoGUI 🐶
 *A graphical user interface for Fido.ps1*
 
+> [!IMPORTANT]  
+> After a few years spent in the company of FidoGUI, which was created simply to compensate for a temporary lack of Pete Batard's original Fido file, the time has come to say goodbye and let it run free in the fields. The project no longer has a reason to exist because, by launching Fido.ps1 (always available at the URL https://github.com/pbatard/Fido/raw/master/Fido.ps1) directly via PowerShell, you will see the same sequence of choices and experience that you have when using the native Download function in Rufus. The interface is clean, immediate, and gets straight to the point, which was somewhat the purpose of FidoGUI.
+> 
+> I would like to personally thank those who have chosen to use this small utility and refer you to the direct use of the Batard file. To ensure that PowerShell retrieves it independently and launches it directly, simply run this command:
+> ```powershell
+> iex (irm 'https://raw.githubusercontent.com/pbatard/Fido/master/Fido.ps1').Substring(3)
+> ```
+> Just for your information: `Substring(3)` is necessary because it cuts the first 3 characters (the UTF-8 BOM) that would otherwise prevent direct execution.
+>
+> In the meantime, I archive the repository and leave it read-only, _cheers_! 🍻
+
 ## 📌 What is this?
 
 **Fido.ps1** is a PowerShell script created by [Pete Batard](https://github.com/pbatard), the author of the brilliant [Rufus](https://github.com/pbatard/rufus) utility. It enables direct downloads of official Microsoft Windows ISO images from Microsoft’s servers.
